@@ -1,0 +1,28 @@
+[
+    {
+        "id": "1",
+        "nome": "Vento Augusto Felix",
+        "raça": "Supostamente Shih Tsu",
+        "img": "https://img.terabyteshop.com.br/archive/4157291290/processador-intel-core-i5-10gen-04.png",
+        "descricao": "Cachorro gordinho, que come bastante, muito preguiçoso e não gosta de receber visitas.",
+        "idade": "9 anos",
+        "dataNascimento": "26/09/2013"
+    },
+    {
+        "id": "2",
+        "nome": "Chuva Regina Felix",
+        "raça": "Maltes",
+        "img": "https://www.kabum.com.br/conteudo/descricao/164854/img/main-pic.png",
+        "descricao": "Muito pequininha, muito sapeca, e insistente quando quer brincar, com personalidade propria, manda na casa e em todo mundo, adora brincar principalmente de futebol",
+        "idade": "5 anos",
+        "dataNascimento": "26/06/2018"
+    },
+    {
+        "id": "3",
+        "raça": "Lhasa Apso",
+        "img": "https://www.kabum.com.br/conteudo/descricao/164854/img/main-pic.png",
+        "descricao": "Um cachorrinho muito bonzinho, parece o Falcon do Historia sem fim, muito carinhoso e amavel mas tem ansiedade quando é para sair",
+        "idade": "5 anos",
+        "dataNascimento": "29/09/2012"
+    }
+]

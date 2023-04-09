@@ -2,8 +2,8 @@ const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
 const bodyParser = require('body-parser')
-const porta = process.env.PORT || 3000
-let produtos = require('./produtos/produtos.json')
+const porta = process.env.PORT || 3333
+let pets = require('./pets/pets.json')
 
 const app = express()
 
@@ -12,26 +12,25 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(cors())
 app.use(express.json())
 
-app.get("/produtos", (req, res) => {
-    // res.status(200)
-    return res.json(produtos)    
+app.get("/pets", (req, res) => {
+    return res.json(pets)    
 })
 
-app.post("/produtos",(req, res) => {
+app.post("/pets",(req, res) => {
     const body = req.body
 
     if (!body) {
         return res.status(400).end()
     }
 
-    produtos.push(body)
+    pets.push(body)
     return res.json(body)
 })
 
-app.delete("/produtos/:id",(req, res) => {
+app.delete("/pets/:id",(req, res) => {
     const id = req.params.id
     
-    let novoProduto = produtos.filter(item => {
+    let novoPet = pets.filter(item => {
         if (item.id !== id) {
             console.log('DIFERENTE', item.id)
 
@@ -39,8 +38,8 @@ app.delete("/produtos/:id",(req, res) => {
         }    
     })
 
-    produtos = novoProduto
-    return res.send(novoProduto)
+    pets = novoPet
+    return res.send(novoPet)
 })
 
 app.listen(porta, () => {
