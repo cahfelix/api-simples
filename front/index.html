@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets</title>
+
+    <style>
+        .familia { 
+            margin: 0;
+            padding: 0;
+        }
+
+        .pet {
+            border: 1px dashed #c6c6c6;
+            padding: 10px;
+            list-style: none;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Familia Natureza</h1>
+    <ul class="familia"></ul>
+    
+
+    <script>
+        let url = 'http://3.14.84.229:3333/pets'
+
+        fetch(url)
+            .then(res => res.json()) // Read the response as text
+            // .then(html => console.log('html', html))
+            .then(data => {
+                data.forEach(pets => {
+                    const markup = `<li class='pet'>
+                                        <p><b>${pets.nome}</b></p>
+                                        <p>${pets.raça}</p>
+                                        <p>${pets.idade}</p>
+                                        <p>${pets.descricao}</p>
+                                        <p>${pets.dataNascimento}</p>
+                                    </li>`
+                    document.querySelector('ul').insertAdjacentHTML('beforeend', markup)
+                });
+            })        
+            .catch(error => console.log('error:', error))
+    
+    </script>
+</body>
+
+
+</html>
