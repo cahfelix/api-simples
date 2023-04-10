@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,10 +42,10 @@
                     const markup = `<li class='pet'>
                                         <img class='foto' src='img/${pets.img}' />
                                         <p class=nome><b>${pets.nome}</b></p>
-                                        <p><b>Raça:</b>${pets.raça}</p>
-                                        <p><b>Idada:</b>${pets.idade}</p>
-                                        <p><b>Sobre ele:</b>${pets.descricao}</p>
-                                        <p><b>Nasceu em:</b> ${pets.dataNascimento}</p>
+                                        <p><b>Raça: </b>${pets.raça}</p>
+                                        <p><b>Idada: </b>${pets.idade}</p>
+                                        <p><b>Sobre ele: </b>${pets.descricao}</p>
+                                        <p><b>Nasceu em: </b>${pets.dataNascimento}</p>
                                     </li>`
                     document.querySelector('ul').insertAdjacentHTML('beforeend', markup)
                 });
