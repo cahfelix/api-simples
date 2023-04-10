@@ -7,16 +7,22 @@
     <title>Pets</title>
 
     <style>
+        
         .familia { 
             margin: 0;
             padding: 0;
+            font-family: 'Courier New', Courier, monospace;
         }
 
         .pet {
             border: 1px dashed #c6c6c6;
             padding: 10px;
             list-style: none;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .foto {
+            width: 100%;
+            max-width: 250px;;
         }
     </style>
 </head>
@@ -34,11 +40,12 @@
             .then(data => {
                 data.forEach(pets => {
                     const markup = `<li class='pet'>
-                                        <p><b>${pets.nome}</b></p>
-                                        <p>${pets.raça}</p>
-                                        <p>${pets.idade}</p>
-                                        <p>${pets.descricao}</p>
-                                        <p>${pets.dataNascimento}</p>
+                                        <img class='foto' src='img/${pets.img}' />
+                                        <p class=nome><b>${pets.nome}</b></p>
+                                        <p><b>Raça:</b>${pets.raça}</p>
+                                        <p><b>Idada:</b>${pets.idade}</p>
+                                        <p><b>Sobre ele:</b>${pets.descricao}</p>
+                                        <p><b>Nasceu em:</b> ${pets.dataNascimento}</p>
                                     </li>`
                     document.querySelector('ul').insertAdjacentHTML('beforeend', markup)
                 });
