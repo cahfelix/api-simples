@@ -7,6 +7,9 @@
     <title>Pets</title>
 
     <style>
+        .topo {
+            text-align: center;
+        }
         
         .familia { 
             margin: 0;
@@ -15,19 +18,32 @@
         }
 
         .pet {
-            border: 1px dashed #c6c6c6;
+            /* border: 1px dashed #c6c6c6; */
+            background: #e1e1e1;
             padding: 10px;
             list-style: none;
             margin-bottom: 15px;
+            border: 4px dashed violet;
+            box-sizing: border-box;
         }
         .foto {
             width: 100%;
-            max-width: 250px;;
+            /* max-width: 250px;; */
+            /* border: 4px dashed violet; */
+            /* box-sizing: border-box; */
+        }
+        .nome {
+            background: violet;
+            padding: 5px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <h1>Familia Natureza</h1>
+    <div class="topo">
+        <h1>Familia Natureza</h1>
+        <p>Adote um e ganhe mais um de brinde, eles sao muito bonzinho e so entrar em contato para levar</p>
+    <div>
     <ul class="familia"></ul>
     
 
@@ -40,8 +56,8 @@
             .then(data => {
                 data.forEach(pets => {
                     const markup = `<li class='pet'>
-                                        <img class='foto' src='img/${pets.img}' />
                                         <p class=nome><b>${pets.nome}</b></p>
+                                        <img class='foto' src='img/${pets.img}' />
                                         <p><b>Raça: </b>${pets.raça}</p>
                                         <p><b>Idada: </b>${pets.idade}</p>
                                         <p><b>Sobre ele: </b>${pets.descricao}</p>
